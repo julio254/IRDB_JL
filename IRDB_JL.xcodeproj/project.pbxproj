@@ -13,6 +13,7 @@
 		891B03812548FD4000A5AB7B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 891B037F2548FD4000A5AB7B /* Main.storyboard */; };
 		891B03832548FD4200A5AB7B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 891B03822548FD4200A5AB7B /* Assets.xcassets */; };
 		891B03862548FD4200A5AB7B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 891B03842548FD4200A5AB7B /* LaunchScreen.storyboard */; };
+		891B03902549015800A5AB7B /* IRDBTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 891B038F2549015800A5AB7B /* IRDBTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		891B03822548FD4200A5AB7B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		891B03852548FD4200A5AB7B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		891B03872548FD4200A5AB7B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		891B038F2549015800A5AB7B /* IRDBTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IRDBTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +65,7 @@
 				891B03822548FD4200A5AB7B /* Assets.xcassets */,
 				891B03842548FD4200A5AB7B /* LaunchScreen.storyboard */,
 				891B03872548FD4200A5AB7B /* Info.plist */,
+				891B038F2549015800A5AB7B /* IRDBTableViewController.swift */,
 			);
 			path = IRDB_JL;
 			sourceTree = "<group>";
@@ -137,6 +140,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				891B03902549015800A5AB7B /* IRDBTableViewController.swift in Sources */,
 				891B037E2548FD4000A5AB7B /* ViewController.swift in Sources */,
 				891B037A2548FD4000A5AB7B /* AppDelegate.swift in Sources */,
 				891B037C2548FD4000A5AB7B /* SceneDelegate.swift in Sources */,
