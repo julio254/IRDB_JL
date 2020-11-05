@@ -14,6 +14,7 @@
 		891B03832548FD4200A5AB7B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 891B03822548FD4200A5AB7B /* Assets.xcassets */; };
 		891B03862548FD4200A5AB7B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 891B03842548FD4200A5AB7B /* LaunchScreen.storyboard */; };
 		891B03902549015800A5AB7B /* IRDBTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 891B038F2549015800A5AB7B /* IRDBTableViewController.swift */; };
+		89B4544E25538B8000F4DB52 /* CastTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89B4544D25538B8000F4DB52 /* CastTableViewController.swift */; };
 		89E78ABC25492142005AFFEE /* DataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89E78ABB25492142005AFFEE /* DataController.swift */; };
 		89E78ABF25492158005AFFEE /* MediaDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89E78ABE25492158005AFFEE /* MediaDataModel.swift */; };
 /* End PBXBuildFile section */
@@ -28,6 +29,7 @@
 		891B03852548FD4200A5AB7B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		891B03872548FD4200A5AB7B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		891B038F2549015800A5AB7B /* IRDBTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IRDBTableViewController.swift; sourceTree = "<group>"; };
+		89B4544D25538B8000F4DB52 /* CastTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CastTableViewController.swift; sourceTree = "<group>"; };
 		89E78ABB25492142005AFFEE /* DataController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataController.swift; sourceTree = "<group>"; };
 		89E78ABE25492158005AFFEE /* MediaDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaDataModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -72,6 +74,7 @@
 				891B038F2549015800A5AB7B /* IRDBTableViewController.swift */,
 				89E78ABB25492142005AFFEE /* DataController.swift */,
 				89E78ABE25492158005AFFEE /* MediaDataModel.swift */,
+				89B4544D25538B8000F4DB52 /* CastTableViewController.swift */,
 			);
 			path = IRDB_JL;
 			sourceTree = "<group>";
@@ -148,6 +151,7 @@
 			files = (
 				89E78ABC25492142005AFFEE /* DataController.swift in Sources */,
 				891B03902549015800A5AB7B /* IRDBTableViewController.swift in Sources */,
+				89B4544E25538B8000F4DB52 /* CastTableViewController.swift in Sources */,
 				89E78ABF25492158005AFFEE /* MediaDataModel.swift in Sources */,
 				891B037E2548FD4000A5AB7B /* DetailViewController.swift in Sources */,
 				891B037A2548FD4000A5AB7B /* AppDelegate.swift in Sources */,

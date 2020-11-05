@@ -82,6 +82,8 @@ class IRDBTableViewController: UITableViewController {
                 let selectedObject = mediaModel!.franchise[indexPath.section].entries[indexPath.row]
                 let controller = segue.destination as! DetailViewController
                 controller.detailItem = selectedObject
+                controller.navigationItem.leftBarButtonItem = splitViewController?.displayModeButtonItem
+                controller.navigationItem.leftItemsSupplementBackButton = true
             }
         }
     }
