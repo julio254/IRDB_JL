@@ -9,7 +9,7 @@ import UIKit
 
 class IRDBTableViewController: UITableViewController {
 
-    var mediaModel: MediaDataModel? {
+    var mediaModel: DCiMediaModel? {
         didSet {
             tableView.reloadData()
         }
@@ -20,7 +20,7 @@ class IRDBTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        title = "IRDb"
+        title = "Drum Corps"
         
         // 1
         let nav = self.navigationController?.navigationBar
@@ -34,38 +34,36 @@ class IRDBTableViewController: UITableViewController {
         imageView.contentMode = .scaleAspectFit
               
         // 4
-        let image = UIImage(named: "irdblogo")
+        let image = UIImage(named: "dciLogo")
         imageView.image = image
               
         // 5
         navigationItem.titleView = imageView
         
         // Call dataController
-        dataController.getJSONData(completion: { dataModel in
-            self.mediaModel = dataModel
-        })
+        dataController.getJSONData(completion: {detailModel in self.mediaModel = detailModel})
     }
 
     // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
-        return mediaModel?.franchise.count ?? 0
+        return mediaModel?.dciGroup.count ?? 0
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return mediaModel?.franchise[section].entries.count ?? 0
+        return mediaModel?.dciGroup[section].groupEntries.count ?? 0
     }
 
     override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        return mediaModel?.franchise[section].franchiseName
+        return mediaModel?.dciGroup[section].groupName
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "mediaCell", for: indexPath)
 
         // Configure the cell...
-        cell.textLabel?.text = mediaModel?.franchise[indexPath.section].entries[indexPath.row].name
-        cell.detailTextLabel?.text = mediaModel?.franchise[indexPath.section].entries[indexPath.row].yearStart
+        cell.textLabel?.text = mediaModel?.dciGroup[indexPath.section].groupEntries[indexPath.row].orgName
+        cell.detailTextLabel?.text = mediaModel?.dciGroup[indexPath.section].groupEntries[indexPath.row].yearFounded
 
         return cell
     }
@@ -77,9 +75,9 @@ class IRDBTableViewController: UITableViewController {
         // Get the new view controller using segue.destination.
         // Pass the selected object to the new view controller.
         
-        if segue.identifier == "showMediaDetail" {
+        if segue.identifier == "showCorpsDetail" {
             if let indexPath = tableView.indexPathForSelectedRow {
-                let selectedObject = mediaModel!.franchise[indexPath.section].entries[indexPath.row]
+                let selectedObject = mediaModel!.dciGroup[indexPath.section].groupEntries[indexPath.row]
                 let controller = segue.destination as! DetailViewController
                 controller.detailItem = selectedObject
                 controller.navigationItem.leftBarButtonItem = splitViewController?.displayModeButtonItem
@@ -87,6 +85,4 @@ class IRDBTableViewController: UITableViewController {
             }
         }
     }
-    
-
 }

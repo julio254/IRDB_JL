@@ -8,8 +8,8 @@
 import UIKit
 
 class CastTableViewController: UITableViewController {
-
-    var castListArray: [Cast]?
+    
+    var staffArray: [CorpStaff]?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -19,7 +19,7 @@ class CastTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return castListArray?.count ?? 0
+        return staffArray?.count ?? 0
     }
 
     
@@ -30,9 +30,14 @@ class CastTableViewController: UITableViewController {
         
         //CAST LIST
         
-        cell.textLabel!.text = "\(castListArray?[indexPath.row].actorName ?? "") as"
+        cell.textLabel!.text = "\(staffArray?[indexPath.row].staffMember ?? "")"
         
-        cell.detailTextLabel?.text = castListArray?[indexPath.row].role
+        let role = staffArray?[indexPath.row].staffRole
+        print(role ?? "")
+        
+        cell.detailTextLabel?.text = staffArray?[indexPath.row].staffRole
+        
+        print (cell.detailTextLabel?.text ?? "")
 
         return cell
     }
